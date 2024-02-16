@@ -10,8 +10,8 @@ async def main():
     mail = await checkMail()
     if mail:
         mail[0] = await translator_foo(mail[0])
-        determain_topic = await determine_latter(mail[0])
-        final_answer[0] = template_answers[determain_topic]
+        determine_topic = await determine_latter(mail[0])
+        final_answer[0] = template_answers[determine_topic]
         final_answer[1] = mail[1]
         mail_send(final_answer)
 
